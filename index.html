@@ -43,8 +43,6 @@
         font-size: 12px;
       }
 
-      
-
       /* App Download Banner */
       .app-banner {
         background: linear-gradient(135deg, #e8e8ff, #f0f0ff);
@@ -87,7 +85,7 @@
       }
 
       .download-btn {
-        background: #a855f7;
+        background: rgb(159, 32, 137);
         color: white;
         border: none;
         padding: 8px 16px;
@@ -138,12 +136,12 @@
         font-family: Georgia, serif;
       }
 
-      .logo img{
+      .logo img {
         width: 95px;
         height: 50px;
       }
 
-      .logo-wraper{
+      .logo-wraper {
         display: flex;
         align-items: center;
         gap: 15px;
@@ -153,7 +151,6 @@
         display: flex;
         gap: 15px;
         align-items: center;
-        
       }
 
       .header-icon {
@@ -276,7 +273,7 @@
         font-size: 24px;
       }
 
-      .category-circle img{
+      .category-circle img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -538,7 +535,7 @@
 
       .add-to-cart-btn {
         width: 100%;
-        background: #a855f7;
+        background: rgb(159, 32, 137);
         color: white;
         border: none;
         padding: 10px;
@@ -653,6 +650,11 @@
         font-weight: bold;
         color: #a855f7;
       }
+      
+      .sidebar-logo img{
+        width: 95px;
+        height: 50px;
+      }
 
       .sidebar-content {
         padding: 0;
@@ -693,7 +695,7 @@
       .sidebar-category-title {
         font-size: 16px;
         font-weight: 500;
-        color:rgb(159, 32, 137);;
+        color: rgb(159, 32, 137);
         margin-bottom: 2px;
       }
 
@@ -726,22 +728,22 @@
 
       /* Category specific colors */
       .cat-women-ethnic {
-        background:  rgb(255, 231, 251);
+        background: rgb(255, 231, 251);
       }
       .cat-women-western {
-        background:  rgb(255, 231, 251);
+        background: rgb(255, 231, 251);
       }
       .cat-men {
-        background:  rgb(255, 231, 251);
+        background: rgb(255, 231, 251);
       }
       .cat-kids {
-        background:  rgb(255, 231, 251);
+        background: rgb(255, 231, 251);
       }
       .cat-home-kitchen {
-        background:  rgb(255, 231, 251);
+        background: rgb(255, 231, 251);
       }
       .cat-beauty-health {
-        background:  rgb(255, 231, 251);
+        background: rgb(255, 231, 251);
       }
 
       /* Modal Styles */
@@ -988,7 +990,6 @@
   <body>
     <!-- Header -->
     <header class="header">
-      
       <!-- Browser Header Simulation -->
       <!-- <div class="browser-header">
         <div class="browser-left">
@@ -1006,7 +1007,7 @@
       <div class="app-banner" id="appBanner">
         <div class="banner-left">
           <div class="app-icon">
-            <img src="./assets/banner-mobile-logo.svg" alt="">
+            <img src="./assets/banner-mobile-logo.svg" alt="" />
           </div>
           <div class="banner-text">
             <h4>Extra 20% off on First Order</h4>
@@ -1029,7 +1030,7 @@
       <!-- Sidebar Menu -->
       <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-          <div class="sidebar-logo">mini bazar</div>
+          <div class="sidebar-logo"><img src="./assets/meeshoLogo.svg" alt="messho logo"></div>
           <button class="sidebar-close" onclick="closeSidebar()">
             &times;
           </button>
@@ -1155,26 +1156,28 @@
       </div>
       <div class="logo-section">
         <div class="logo-wraper">
-           <div class="menu-icon" onclick="openSidebar()">☰</div>
-        <div class="logo">
-            <img src="./assets/meeshoLogo.svg" alt="logo">
-        </div> 
+          <div class="menu-icon" onclick="openSidebar()">☰</div>
+          <div class="logo">
+            <img src="./assets/meeshoLogo.svg" alt="logo" />
+          </div>
         </div>
-        
+
         <div class="header-icons">
-          <div class="header-icon" onclick="toggleAuth()"><img src="./assets/wishlist-header.svg" alt=""></div>
+          <div class="header-icon" onclick="toggleAuth()">
+            <img src="./assets/wishlist-header.svg" alt="" />
+          </div>
           <div class="header-icon" onclick="openCart()">
-            <img src="./assets/cart-header.svg" alt="">
+            <img src="./assets/cart-header.svg" alt="" />
             <span class="cart-badge" id="cartBadge">0</span>
           </div>
-      </div>
+        </div>
       </div>
     </header>
 
     <!-- Search -->
     <div class="search-container">
       <div class="search-icon">
-        <img src="./assets/search-icon.svg" alt="search-icon">
+        <img src="./assets/search-icon.svg" alt="search-icon" />
       </div>
       <input
         type="text"
@@ -1186,7 +1189,9 @@
     <!-- Delivery Location -->
     <div class="delivery-location">
       <div class="location-text">
-        <span class="location-icon"><img src="./assets/delivery.svg" alt=""></span>
+        <span class="location-icon"
+          ><img src="./assets/delivery.svg" alt=""
+        /></span>
         <span>Add delivery location to check extra discount</span>
       </div>
       <span class="arrow-right">⟫</span>
@@ -1196,30 +1201,32 @@
     <div class="categories-section">
       <div class="categories-scroll">
         <div class="category-item">
-          <div class="category-circle cat-categories"><img src="./assets/categories-icon.jpg" alt=""></div>
+          <div class="category-circle cat-categories">
+            <img src="./assets/categories-icon.jpg" alt="" />
+          </div>
           <div class="category-name">Categories</div>
         </div>
         <div class="category-item">
           <div class="category-circle cat-kurti">
-            <img src="./assets/kurti.webp" alt="kurti">
+            <img src="./assets/kurti.webp" alt="kurti" />
           </div>
           <div class="category-name">Kurti & Dress</div>
         </div>
         <div class="category-item">
           <div class="category-circle cat-kids">
-            <img src="./assets/kids.webp" alt="kids">
+            <img src="./assets/kids.webp" alt="kids" />
           </div>
           <div class="category-name">Kids & Toys</div>
         </div>
         <div class="category-item">
           <div class="category-circle cat-western">
-            <img src="./assets/wair.webp" alt="Westernwear">
+            <img src="./assets/wair.webp" alt="Westernwear" />
           </div>
           <div class="category-name">Westernwear</div>
         </div>
         <div class="category-item">
           <div class="category-circle cat-home">
-            <img src="./assets/homeAndKitchin.webp" alt="homeAndKitchin">
+            <img src="./assets/homeAndKitchin.webp" alt="homeAndKitchin" />
           </div>
           <div class="category-name">Home & Kitchen</div>
         </div>
@@ -1229,10 +1236,34 @@
     <!-- Promotional Banners -->
     <div class="promo-banners">
       <div class="promo-scroll">
-        <div class="promo-banner promo-1"><img style="width: 100vh;" src="./assets/sale-poster1.webp" alt="sales poster"></div>
-        <div class="promo-banner promo-2"><img style="width: 100vh;" src="./assets/sale-poster2.webp" alt="sales poster"></div>
-        <div class="promo-banner promo-3"><img style="width: 100vh;" src="./assets/sale-poster3.webp" alt="sales poster"></div>
-        <div class="promo-banner promo-4"><img style="width: 100vh;" src="./assets/sale-poster4.webp" alt="sales poster"></div>
+        <div class="promo-banner promo-1">
+          <img
+            style="width: 100vh"
+            src="./assets/sale-poster1.webp"
+            alt="sales poster"
+          />
+        </div>
+        <div class="promo-banner promo-2">
+          <img
+            style="width: 100vh"
+            src="./assets/sale-poster2.webp"
+            alt="sales poster"
+          />
+        </div>
+        <div class="promo-banner promo-3">
+          <img
+            style="width: 100vh"
+            src="./assets/sale-poster3.webp"
+            alt="sales poster"
+          />
+        </div>
+        <div class="promo-banner promo-4">
+          <img
+            style="width: 100vh"
+            src="./assets/sale-poster4.webp"
+            alt="sales poster"
+          />
+        </div>
       </div>
     </div>
 
@@ -1259,24 +1290,33 @@
     <!-- Bottom Navigation -->
     <nav class="bottom-nav">
       <div class="nav-item active">
-        <div class="nav-icon"><img src="./assets/bottom-home-icon.svg" alt="bottom-home-icon"></div>
+        <div class="nav-icon">
+          <img src="./assets/bottom-home-icon.svg" alt="bottom-home-icon" />
+        </div>
         <div class="nav-label">Home</div>
       </div>
       <div class="nav-item">
-        <div class="nav-icon"><img src="./assets/categories-bottom.svg" alt="categories"></div>
+        <div class="nav-icon">
+          <img src="./assets/categories-bottom.svg" alt="categories" />
+        </div>
         <div class="nav-label">Categories</div>
       </div>
       <div class="nav-item">
-        <div class="nav-icon"><img src="./assets/mallTabIcon.webp" style="width: 1.5rem;" alt="">
+        <div class="nav-icon">
+          <img src="./assets/mallTabIcon.webp" style="width: 1.5rem" alt="" />
         </div>
         <div class="nav-label">Mall</div>
       </div>
       <div class="nav-item">
-        <div class="nav-icon"><img src="./assets/help-bottom-icon.svg" alt="help-bottom-icon"></div>
+        <div class="nav-icon">
+          <img src="./assets/help-bottom-icon.svg" alt="help-bottom-icon" />
+        </div>
         <div class="nav-label">Help</div>
       </div>
       <div class="nav-item" onclick="toggleAuth()">
-        <div class="nav-icon"><img src="./assets/account-logo.svg" alt="account-logo"></div>
+        <div class="nav-icon">
+          <img src="./assets/account-logo.svg" alt="account-logo" />
+        </div>
         <div class="nav-label">Account</div>
       </div>
     </nav>
@@ -1515,48 +1555,51 @@
           const productCard = document.createElement("div");
           productCard.className = "product-card";
           productCard.innerHTML = `
-                    <div class="product-image-container">
-                        <div class="product-image">${product.image}</div>
-                        <button class="wishlist-btn" onclick="toggleWishlist(${
-                          product.id
-                        }, event)">
-                            ${wishlist.includes(product.id) ? "❤️" : "🤍"}
-                        </button>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-title">${product.title}</div>
-                        <div class="product-price">
-                            <span class="current-price">₹${
-                              product.currentPrice
-                            }</span>
-                            <span class="original-price">₹${
-                              product.originalPrice
-                            }</span>
-                            <span class="discount-percent">${
-                              product.discount
-                            } off</span>
-                        </div>
-                        <div class="product-offers">${product.offers}</div>
-                        <div class="product-rating">
-                            <span class="rating-value">${
-                              product.rating
-                            } ★</span>
-                            <span class="rating-count">(${
-                              product.ratingCount
-                            })</span>
-                            ${
-                              product.ratingCount > 10000
-                                ? '<span style="color: #ff4757; font-size: 11px; font-weight: bold;">🔥 Trusted</span>'
-                                : ""
-                            }
-                        </div>
-                        <button class="add-to-cart-btn" onclick="addToCart(${
-                          product.id
-                        }, event)">Add to Cart</button>
-                    </div>
-                `;
+            <div class="product-image-container" onclick="goToProduct(${
+              product.id
+            })">
+                <div class="product-image">${product.image}</div>
+                <button class="wishlist-btn" onclick="toggleWishlist(${
+                  product.id
+                }, event)">
+                    ${wishlist.includes(product.id) ? "❤️" : "🤍"}
+                </button>
+            </div>
+            <div class="product-info">
+                <div class="product-title" onclick="goToProduct(${
+                  product.id
+                })">${product.title}</div>
+                <div class="product-price">
+                    <span class="current-price">₹${product.currentPrice}</span>
+                    <span class="original-price">₹${
+                      product.originalPrice
+                    }</span>
+                    <span class="discount-percent">${
+                      product.discount
+                    } off</span>
+                </div>
+                <div class="product-offers">${product.offers}</div>
+                <div class="product-rating">
+                    <span class="rating-value">${product.rating} ⭐</span>
+                    <span class="rating-count">(${product.ratingCount})</span>
+                    ${
+                      product.ratingCount > 10000
+                        ? '<span style="color: #ff4757; font-size: 11px; font-weight: bold;">🔥 Trusted</span>'
+                        : ""
+                    }
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart(${
+                  product.id
+                }, event)">Add to Cart</button>
+            </div>
+        `;
           productsGrid.appendChild(productCard);
         });
+      }
+
+      // Add function to navigate to product page
+      function goToProduct(productId) {
+        window.location.href = `product.html?id=${productId}`;
       }
 
       // Sidebar functions
@@ -2034,10 +2077,10 @@
               showSuccessMessage("Categories feature coming soon!");
               break;
             case 2: // Mall
-              showSuccessMessage("Mini Bazar Mall coming soon!");
+              window.location.href = "mall.html";
               break;
             case 3: // Help
-              showSuccessMessage("Need help? Call us at 1800-XXX-XXXX");
+              window.location.href = "help.html";
               break;
           }
         });
@@ -2110,6 +2153,31 @@
           showSuccessMessage(`${promoText} - Special offer activated! 🎉`);
         });
       });
+
+      // Add CSS for clickable product elements
+      const additionalCSS = `
+.product-image-container {
+    cursor: pointer;
+}
+
+.product-title {
+    cursor: pointer;
+}
+
+.product-title:hover {
+    color: #a855f7;
+}
+
+.product-image-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+`;
+
+      // Inject additional CSS
+      const style = document.createElement("style");
+      style.textContent = additionalCSS;
+      document.head.appendChild(style);
     </script>
   </body>
 </html>

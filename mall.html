@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Bazar Mall - Premium Shopping Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .mall-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .mall-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .premium-badge {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Search Section */
+        .search-section {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            background: #f8f9fa;
+        }
+
+        .search-box:focus {
+            border-color: #667eea;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 20px;
+        }
+
+        /* Banner Section */
+        .banner-section {
+            padding: 20px 15px;
+            background: white;
+            margin-bottom: 15px;
+        }
+
+        .main-banner {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-content {
+            z-index: 2;
+        }
+
+        .banner-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .banner-subtitle {
+            font-size: 16px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .shop-now-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mall Features */
+        .features-section {
+            padding: 20px 15px;
+            background: white;
+            margin-bottom: 15px;
+        }
+
+        .features-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .feature-subtitle {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Premium Brands */
+        .brands-section {
+            padding: 20px 15px;
+            background: white;
+            margin-bottom: 15px;
+        }
+
+        .brands-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .brands-scroll {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding-bottom: 10px;
+        }
+
+        .brands-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .brand-card {
+            min-width: 100px;
+            height: 100px;
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .brand-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .brand-logo {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .brand-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Premium Categories */
+        .premium-categories {
+            padding: 20px 15px;
+            background: white;
+            margin-bottom: 15px;
+        }
+
+        .categories-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 120px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .category-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .category-card:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+        }
+
+        .category-card:hover {
+            transform: scale(1.02);
+        }
+
+        .category-icon {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .category-name {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            padding: 40px 15px;
+            background: white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .coming-soon-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .coming-soon-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .coming-soon-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .notify-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 6px 0 8px 0;
+            border-top: 1px solid #e0e0e0;
+            z-index: 100;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.2s;
+            padding: 4px 12px;
+            min-width: 60px;
+        }
+
+        .nav-item.active {
+            color: #a855f7;
+        }
+
+        .nav-item.active .nav-icon {
+            color: #a855f7;
+        }
+
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-label {
+            font-size: 11px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #27ae60;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            min-width: 280px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="back-btn" onclick="goBack()">←</button>
+        <div class="header-content">
+            <h1 class="mall-title">🏬 Mini Bazar Mall</h1>
+            <p class="mall-subtitle">Premium Shopping Experience</p>
+            <div class="premium-badge">✨ Premium Quality Assured</div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-section">
+        <div class="search-container">
+            <div class="search-icon">🔍</div>
+            <input type="text" class="search-box" placeholder="Search premium brands & products...">
+        </div>
+    </div>
+
+    <!-- Main Banner -->
+    <div class="banner-section">
+        <div class="main-banner">
+            <div class="banner-content">
+                <h2 class="banner-title">Mall Opening Soon!</h2>
+                <p class="banner-subtitle">Get ready for premium shopping</p>
+                <button class="shop-now-btn" onclick="comingSoon()">Explore Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mall Features -->
+    <div class="features-section">
+        <h2 class="features-title">🌟 What Makes Our Mall Special</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🚚</span>
+                <div class="feature-title">Express Delivery</div>
+                <div class="feature-subtitle">Same day delivery</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">💎</span>
+                <div class="feature-title">Premium Quality</div>
+                <div class="feature-subtitle">100% authentic brands</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎁</span>
+                <div class="feature-title">Exclusive Offers</div>
+                <div class="feature-subtitle">Members only deals</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔄</span>
+                <div class="feature-title">Easy Returns</div>
+                <div class="feature-subtitle">15 days return policy</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Brands -->
+    <div class="brands-section">
+        <h2 class="brands-title">🏷️ Premium Brands Coming Soon</h2>
+        <div class="brands-scroll">
+            <div class="brand-card" onclick="comingSoon()">
+                <div class="brand-logo">👑</div>
+                <div class="brand-name">Luxury</div>
+            </div>
+            <div class="brand-card" onclick="comingSoon()">
+                <div class="brand-logo">💎</div>
+                <div class="brand-name">Premium</div>
+            </div>
+            <div class="brand-card" onclick="comingSoon()">
+                <div class="brand-logo">✨</div>
+                <div class="brand-name">Elite</div>
+            </div>
+            <div class="brand-card" onclick="comingSoon()">
+                <div class="brand-logo">🌟</div>
+                <div class="brand-name">Signature</div>
+            </div>
+            <div class="brand-card" onclick="comingSoon()">
+                <div class="brand-logo">🏆</div>
+                <div class="brand-name">Premium Plus</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Categories -->
+    <div class="premium-categories">
+        <h2 class="categories-title">🛍️ Premium Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card" onclick="comingSoon()">
+                <span class="category-icon">👗</span>
+                <div class="category-name">Premium Fashion</div>
+            </div>
+            <div class="category-card" onclick="comingSoon()">
+                <span class="category-icon">💄</span>
+                <div class="category-name">Luxury Beauty</div>
+            </div>
+            <div class="category-card" onclick="comingSoon()">
+                <span class="category-icon">📱</span>
+                <div class="category-name">Electronics</div>
+            </div>
+            <div class="category-card" onclick="comingSoon()">
+                <span class="category-icon">🏠</span>
+                <div class="category-name">Home Decor</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Section -->
+    <div class="coming-soon">
+        <div class="coming-soon-icon">🚧</div>
+        <h2 class="coming-soon-title">Mall Opening Very Soon!</h2>
+        <p class="coming-soon-subtitle">
+            We're working hard to bring you the best premium shopping experience. 
+            Get ready for exclusive brands, amazing deals, and premium quality products!
+        </p>
+        <button class="notify-btn" onclick="notifyMe()">Notify Me When Ready</button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-item" onclick="goToHome()">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </div>
+        <div class="nav-item" onclick="comingSoon()">
+            <div class="nav-icon">📂</div>
+            <div class="nav-label">Categories</div>
+        </div>
+        <div class="nav-item active">
+            <div class="nav-icon">🏬</div>
+            <div class="nav-label">Mall</div>
+        </div>
+        <div class="nav-item" onclick="goToHelp()">
+            <div class="nav-icon">❓</div>
+            <div class="nav-label">Help</div>
+        </div>
+        <div class="nav-item" onclick="comingSoon()">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">Account</div>
+        </div>
+    </nav>
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+
+        function goToHome() {
+            window.location.href = 'index.html';
+        }
+
+        function goToHelp() {
+            window.location.href = 'help.html';
+        }
+
+        function comingSoon() {
+            showSuccessMessage('🚧 This feature is coming soon! Stay tuned for amazing updates!');
+        }
+
+        function notifyMe() {
+            const email = prompt('Enter your email to get notified when Mall opens:');
+            if (email && email.includes('@')) {
+                showSuccessMessage('🎉 Thank you! We\'ll notify you when Mini Bazar Mall opens!');
+            } else if (email) {
+                alert('Please enter a valid email address');
+            }
+        }
+
+        function showSuccessMessage(message) {
+            const existingMessages = document.querySelectorAll('.success-message');
+            existingMessages.forEach(msg => msg.remove());
+
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.textContent = message;
+
+            document.body.appendChild(successDiv);
+
+            setTimeout(() => {
+                if (successDiv && successDiv.parentNode) {
+                    successDiv.remove();
+                }
+            }, 3500);
+        }
+
+        // Search functionality
+        document.querySelector('.search-box').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            if (searchTerm.length > 0) {
+                setTimeout(() => {
+                    showSuccessMessage(`🔍 Searching for "${searchTerm}" in premium mall... Coming soon!`);
+                }, 500);
+            }
+        });
+
+        // Animation for cards on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card, .brand-card, .category-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
