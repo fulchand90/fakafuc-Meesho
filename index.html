@@ -653,8 +653,8 @@
         font-weight: bold;
         color: #a855f7;
       }
-      
-      .sidebar-logo img{
+
+      .sidebar-logo img {
         width: 95px;
         height: 50px;
       }
@@ -1033,7 +1033,9 @@
       <!-- Sidebar Menu -->
       <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-          <div class="sidebar-logo"><img src="./assets/meeshoLogo.svg" alt="messho logo"></div>
+          <div class="sidebar-logo">
+            <img src="./assets/meeshoLogo.svg" alt="messho logo" />
+          </div>
           <button class="sidebar-close" onclick="closeSidebar()">
             &times;
           </button>
@@ -1561,7 +1563,9 @@
             <div class="product-image-container" onclick="goToProduct(${
               product.id
             })">
-                <img class="product-image" src="${product.image}" alt="${product.title}">
+                <img class="product-image" src="${product.image}" alt="${
+            product.title
+          }">
             </div>
             <button class="wishlist-btn" onclick="toggleWishlist(${
               product.id
