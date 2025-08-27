@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Bazar</title>
+    <title>Meesho</title>
     <style>
       * {
         margin: 0;
@@ -441,7 +441,9 @@
       }
 
       .product-image {
-        font-size: 60px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 180px;
       }
 
       .wishlist-btn {
@@ -1453,7 +1455,7 @@
           rating: 4.5,
           ratingCount: 9337,
           offers: "₹160 with 2 Special Offers",
-          image: "💍",
+          image: "./assets/products/1.webp",
         },
         {
           id: 2,
@@ -1464,7 +1466,7 @@
           rating: 4.4,
           ratingCount: 23558,
           offers: "₹207 with 2 Special Offers",
-          image: "👕",
+          image: "./assets/products/2.webp",
         },
         {
           id: 3,
@@ -1475,7 +1477,7 @@
           rating: 3.6,
           ratingCount: 13241,
           offers: "₹310 with 2 Special Offers",
-          image: "👔",
+          image: "./assets/products/3.webp",
         },
         {
           id: 4,
@@ -1486,7 +1488,7 @@
           rating: 4.0,
           ratingCount: 55687,
           offers: "₹289 with 2 Special Offers",
-          image: "👚",
+          image: "./assets/products/4.webp",
         },
         {
           id: 5,
@@ -1497,7 +1499,7 @@
           rating: 4.2,
           ratingCount: 8745,
           offers: "₹599 with 2 Special Offers",
-          image: "👗",
+          image: "./assets/products/5.webp",
         },
         {
           id: 6,
@@ -1508,7 +1510,7 @@
           rating: 4.1,
           ratingCount: 12456,
           offers: "₹399 with 2 Special Offers",
-          image: "👖",
+          image: "./assets/products/6.webp",
         },
         {
           id: 7,
@@ -1519,7 +1521,7 @@
           rating: 4.3,
           ratingCount: 3254,
           offers: "₹799 with 2 Special Offers",
-          image: "🍱",
+          image: "./assets/products/7.webp",
         },
         {
           id: 8,
@@ -1530,7 +1532,7 @@
           rating: 4.4,
           ratingCount: 6789,
           offers: "₹999 with 2 Special Offers",
-          image: "💄",
+          image: "./assets/products/8.webp",
         },
       ];
 
@@ -1558,12 +1560,13 @@
             <div class="product-image-container" onclick="goToProduct(${
               product.id
             })">
-                <div class="product-image">${product.image}</div>
-                <button class="wishlist-btn" onclick="toggleWishlist(${
-                  product.id
-                }, event)">
-                    ${wishlist.includes(product.id) ? "❤️" : "🤍"}
-                </button>
+                <img class="product-image" src="${product.image}" alt="${product.title}">
+            </div>
+            <button class="wishlist-btn" onclick="toggleWishlist(${
+              product.id
+            }, event)">
+                ${wishlist.includes(product.id) ? "❤️" : "🤍"}
+            </button>
             </div>
             <div class="product-info">
                 <div class="product-title" onclick="goToProduct(${

@@ -701,7 +701,7 @@
                 discount: "47%",
                 rating: 4.5,
                 ratingCount: 9337,
-                image: "💍",
+                image: "./assets/products/1.webp",
             },
             '2': {
                 id: 2,
@@ -711,7 +711,7 @@
                 discount: "79%",
                 rating: 4.4,
                 ratingCount: 23558,
-                image: "👕",
+                image: "./assets/products/2.webp",
             },
             '3': {
                 id: 3,
@@ -721,7 +721,7 @@
                 discount: "76%",
                 rating: 3.6,
                 ratingCount: 13241,
-                image: "👔",
+                image: "./assets/products/3.webp",
             },
             '4': {
                 id: 4,
@@ -731,7 +731,57 @@
                 discount: "76%",
                 rating: 4.0,
                 ratingCount: 55687,
-                image: "👚",
+                image: "./assets/products/4.webp",
+            },
+            '5': {
+                id: 5,
+                title: "Elegant Women's Dress",
+                currentPrice: 499,
+                originalPrice: 1999,
+                discount: "75%",
+                rating: 4.8,
+                ratingCount: 12345,
+                image: "./assets/products/5.webp",
+            },
+            '6': {
+                id: 6,
+                title: "Casual Men's T-Shirt",
+                currentPrice: 299,
+                originalPrice: 999,
+                discount: "70%",
+                rating: 4.2,
+                ratingCount: 6789,
+                image: "./assets/products/6.webp",
+            },
+            '7': {
+                id: 7,
+                title: "Stylish Backpack",
+                currentPrice: 899,
+                originalPrice: 1999,
+                discount: "55%",
+                rating: 4.5,
+                ratingCount: 2345,
+                image: "./assets/products/7.webp",
+            },
+            '8': {
+                id: 8,
+                title: "Trendy Sunglasses",
+                currentPrice: 199,
+                originalPrice: 799,
+                discount: "75%",
+                rating: 4.0,
+                ratingCount: 4567,
+                image: "./assets/products/8.webp",
+            },
+            '9': {
+                id: 9,
+                title: "Casual Women's Top",
+                currentPrice: 299,
+                originalPrice: 999,
+                discount: "70%",
+                rating: 4.2,
+                ratingCount: 6789,
+                image: "./assets/products/9.webp",
             }
         };
 
@@ -754,7 +804,10 @@
                 currentProduct = products['4']; // Default product
             }
 
-            document.getElementById('productImage').textContent = currentProduct.image;
+            // Set product image as an <img> element
+            const productImageDiv = document.getElementById('productImage');
+            productImageDiv.innerHTML = `<img src="${currentProduct.image}" alt="${currentProduct.title}" style="max-width:100%;max-height:100%;object-fit:contain;">`;
+
             document.getElementById('productTitle').textContent = currentProduct.title;
             document.getElementById('productRating').textContent = `${currentProduct.rating} ⭐`;
             document.getElementById('ratingCount').textContent = `(${currentProduct.ratingCount.toLocaleString()})`;
