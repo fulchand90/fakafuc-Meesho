@@ -17,18 +17,309 @@
             overflow-x: hidden;
         }
 
+        /* Sidebar Menu */
+      .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1500;
+        display: none;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 280px;
+        height: 100%;
+        background: white;
+        z-index: 1600;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .sidebar-header {
+        background: white;
+        padding: 15px;
+        border-bottom: 1px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .sidebar-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #666;
+        cursor: pointer;
+      }
+
+      .sidebar-logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(159, 32, 137);
+      }
+
+      .sidebar-logo img {
+        width: 95px;
+        height: 50px;
+      }
+
+      .sidebar-content {
+        padding: 0;
+      }
+
+      .sidebar-section {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .sidebar-category {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid #f8f8f8;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .sidebar-category:hover {
+        background: #f8f8f8;
+      }
+
+      .sidebar-category-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 18px;
+      }
+
+      .sidebar-category-text {
+        flex: 1;
+      }
+
+      .sidebar-category-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(159, 32, 137);
+        margin-bottom: 2px;
+      }
+
+      .sidebar-category-subtitle {
+        font-size: 12px;
+        color: #666;
+      }
+
+      .sidebar-subcategories {
+        background: #f8f8f8;
+        padding: 10px 0;
+        display: none;
+      }
+
+      .sidebar-subcategory {
+        padding: 8px 20px 8px 75px;
+        font-size: 14px;
+        color: #666;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .sidebar-subcategory:hover {
+        background: #f0f0f0;
+      }
+
+      .sidebar-category.expanded .sidebar-subcategories {
+        display: block;
+      }
+
+      /* Category specific colors */
+      .cat-women-ethnic {
+        background: rgb(255, 231, 251);
+      }
+      .cat-women-western {
+        background: rgb(255, 231, 251);
+      }
+      .cat-men {
+        background: rgb(255, 231, 251);
+      }
+      .cat-kids {
+        background: rgb(255, 231, 251);
+      }
+      .cat-home-kitchen {
+        background: rgb(255, 231, 251);
+      }
+      .cat-beauty-health {
+        background: rgb(255, 231, 251);
+      }
+
         /* Header */
-        .header {
-            background: white;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #f0f0f0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        /* Browser Header Simulation */
+      .browser-header {
+        background: #333;
+        color: white;
+        padding: 8px 15px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .browser-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .browser-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+      }
+
+      /* App Download Banner */
+      .app-banner {
+        background: linear-gradient(135deg, #e8e8ff, #f0f0ff);
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .banner-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .app-icon {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .banner-text h4 {
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .banner-text p {
+        font-size: 13px;
+        color: #666;
+        margin-top: 2px;
+      }
+
+      .download-btn {
+        background: rgb(159, 32, 137);
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .close-banner {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #999;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+
+      /* Header */
+      .header {
+        background: white;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .logo-section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+      }
+
+      .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: rgb(159, 32, 137);
+        font-family: Georgia, serif;
+      }
+
+      .logo img {
+        width: 95px;
+        height: 50px;
+      }
+
+      .logo-wraper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .header-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .header-icon {
+        font-size: 24px;
+        color: rgb(159, 32, 137);
+        cursor: pointer;
+        position: relative;
+      }
+
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #ff4757;
+        color: white;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
 
         .header-left {
             display: flex;
@@ -47,7 +338,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #a855f7;
+            color: rgb(159, 32, 137);
         }
 
         .header-icons {
@@ -58,7 +349,7 @@
 
         .header-icon {
             font-size: 24px;
-            color: #a855f7;
+            color: rgb(159, 32, 137);
             cursor: pointer;
             position: relative;
         }
@@ -138,7 +429,7 @@
         }
 
         .indicator-dot.active {
-            background: #a855f7;
+            background: rgb(159, 32, 137);
         }
 
         /* Product Details */
@@ -267,13 +558,13 @@
         }
 
         .size-option:hover {
-            border-color: #a855f7;
+            border-color: rgb(159, 32, 137);
         }
 
         .size-option.selected {
-            background: #a855f7;
+            background: rgb(159, 32, 137);
             color: white;
-            border-color: #a855f7;
+            border-color: rgb(159, 32, 137);
         }
 
         /* Product Description */
@@ -288,7 +579,7 @@
         }
 
         .show-more {
-            color: #a855f7;
+            color: rgb(159, 32, 137);
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
@@ -342,8 +633,8 @@
 
         .add-to-cart-btn {
             background: white;
-            color: #a855f7;
-            border: 2px solid #a855f7;
+            color: rgb(159, 32, 137);
+            border: 2px solid rgb(159, 32, 137);
         }
 
         .add-to-cart-btn:hover {
@@ -351,7 +642,7 @@
         }
 
         .buy-now-btn {
-            background: #a855f7;
+            background: rgb(159, 32, 137);
             color: white;
         }
 
@@ -420,7 +711,7 @@
         }
 
         .input-group input:focus {
-            border-color: #a855f7;
+            border-color: rgb(159, 32, 137);
         }
 
         .modal-btn {
@@ -431,7 +722,7 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            background: #a855f7;
+            background: rgb(159, 32, 137);
             color: white;
             margin-top: 10px;
         }
@@ -443,7 +734,7 @@
         }
 
         .auth-toggle a {
-            color: #a855f7;
+            color: rgb(159, 32, 137);
             text-decoration: none;
             font-weight: 600;
         }
@@ -456,7 +747,7 @@
         .upi-amount {
             font-size: 28px;
             font-weight: bold;
-            color: #a855f7;
+            color: rgb(159, 32, 137);
             margin: 20px 0;
         }
 
@@ -469,7 +760,7 @@
 
         .upi-btn {
             padding: 15px 10px;
-            border: 2px solid #a855f7;
+            border: 2px solid rgb(159, 32, 137);
             background: white;
             border-radius: 8px;
             cursor: pointer;
@@ -479,7 +770,7 @@
         }
 
         .upi-btn:hover {
-            background: #a855f7;
+            background: rgb(159, 32, 137);
             color: white;
         }
 
@@ -523,20 +814,192 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header-left">
-            <button class="back-btn" onclick="goBack()">←</button>
-            <div class="logo">Mini Bazar</div>
-        </div>
-        <div class="header-icons">
-            <div class="header-icon" onclick="toggleWishlist()">🤍</div>
-            <div class="header-icon" onclick="toggleAuth()">👤</div>
-            <div class="header-icon" onclick="openCart()">
-                🛒
-                <span class="cart-badge" id="cartBadge">0</span>
+        <header class="header">
+            <!-- Browser Header Simulation -->
+            <!-- <div class="browser-header">
+                <div class="browser-left">
+                        <span>✕</span>
+                        <span>⌄</span>
+                        <span>Online Sho... meesho.com</span>
+                </div>
+                <div class="browser-right">
+                        <span>📶 1 device</span>
+                        <span>📶 8.00 Vo</span>
+                </div>
+        </div> -->
+
+            <!-- App Download Banner -->
+            <div class="app-banner" id="appBanner">
+                <div class="banner-left">
+                    <div class="app-icon">
+                        <img src="./assets/banner-mobile-logo.svg" alt="" />
+                    </div>
+                    <div class="banner-text">
+                        <h4>Extra 20% off on First Order</h4>
+                        <p>Only on app</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="download-btn">Download Now</button>
+                    <button class="close-banner" onclick="closeBanner()">&times;</button>
+                </div>
             </div>
-        </div>
-    </header>
+
+            <!-- Sidebar Overlay -->
+            <div
+                class="sidebar-overlay"
+                id="sidebarOverlay"
+                onclick="closeSidebar()"
+            ></div>
+
+            <!-- Sidebar Menu -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <img src="./assets/meeshoLogo.svg" alt="messho logo" />
+                    </div>
+                    <button class="sidebar-close" onclick="closeSidebar()">
+                        &times;
+                    </button>
+                </div>
+                <div class="sidebar-content">
+                    <div class="sidebar-section">
+                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
+                            <div class="sidebar-category-icon cat-women-ethnic">👗</div>
+                            <div class="sidebar-category-text">
+                                <div class="sidebar-category-title">Women Ethnic</div>
+                                <div class="sidebar-category-subtitle">All Categories</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-subcategories">
+                            <div class="sidebar-subcategory">Cotton Kurtis</div>
+                            <div class="sidebar-subcategory">Chikankari Kurtis</div>
+                            <div class="sidebar-subcategory">All Kurta Sets</div>
+                            <div class="sidebar-subcategory">Kurta Palazzo Sets</div>
+                            <div class="sidebar-subcategory">Rayon Kurta Sets</div>
+                            <div class="sidebar-subcategory">Kurta Pant Sets</div>
+                            <div class="sidebar-subcategory">Cotton Kurta Sets</div>
+                            <div class="sidebar-subcategory">Sharara Sets</div>
+                            <div class="sidebar-subcategory">Cotton Sets</div>
+                            <div class="sidebar-subcategory">Rayon Sets</div>
+                            <div class="sidebar-subcategory">Printed Sets</div>
+                            <div class="sidebar-subcategory">All Suits & Dress Material</div>
+                            <div class="sidebar-subcategory">Cotton Suits</div>
+                            <div class="sidebar-subcategory">Embroidered Suits</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
+                            <div class="sidebar-category-icon cat-women-western">👖</div>
+                            <div class="sidebar-category-text">
+                                <div class="sidebar-category-title">Women Western</div>
+                                <div class="sidebar-category-subtitle">
+                                    Tops, Dresses & More
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-subcategories">
+                            <div class="sidebar-subcategory">Tops & Tunics</div>
+                            <div class="sidebar-subcategory">Dresses</div>
+                            <div class="sidebar-subcategory">Jeans</div>
+                            <div class="sidebar-subcategory">Trousers & Pants</div>
+                            <div class="sidebar-subcategory">Skirts</div>
+                            <div class="sidebar-subcategory">Co-ord Sets</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
+                            <div class="sidebar-category-icon cat-men">👕</div>
+                            <div class="sidebar-category-text">
+                                <div class="sidebar-category-title">Men</div>
+                                <div class="sidebar-category-subtitle">
+                                    Top Wear, Bottom Wear & More
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-subcategories">
+                            <div class="sidebar-subcategory">Top Wear</div>
+                            <div class="sidebar-subcategory">Bottom Wear</div>
+                            <div class="sidebar-subcategory">Men's Grooming</div>
+                            <div class="sidebar-subcategory">Ethnic Wear</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
+                            <div class="sidebar-category-icon cat-kids">🧸</div>
+                            <div class="sidebar-category-text">
+                                <div class="sidebar-category-title">Kids</div>
+                                <div class="sidebar-category-subtitle">
+                                    0 to 14 Years Kids Clothing
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-subcategories">
+                            <div class="sidebar-subcategory">Boys Clothing</div>
+                            <div class="sidebar-subcategory">Girls Clothing</div>
+                            <div class="sidebar-subcategory">Footwear</div>
+                            <div class="sidebar-subcategory">Toys</div>
+                            <div class="sidebar-subcategory">Baby Care</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
+                            <div class="sidebar-category-icon cat-home-kitchen">🏠</div>
+                            <div class="sidebar-category-text">
+                                <div class="sidebar-category-title">Home & Kitchen</div>
+                                <div class="sidebar-category-subtitle">Everything You Need</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-subcategories">
+                            <div class="sidebar-subcategory">Kitchen & Dining</div>
+                            <div class="sidebar-subcategory">Home Decor</div>
+                            <div class="sidebar-subcategory">Home Improvement</div>
+                            <div class="sidebar-subcategory">Storage</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
+                            <div class="sidebar-category-icon cat-beauty-health">💄</div>
+                            <div class="sidebar-category-text">
+                                <div class="sidebar-category-title">Beauty & Health</div>
+                                <div class="sidebar-category-subtitle">
+                                    Makeup, Skincare & More
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-subcategories">
+                            <div class="sidebar-subcategory">Make up</div>
+                            <div class="sidebar-subcategory">Wellness</div>
+                            <div class="sidebar-subcategory">Skincare</div>
+                            <div class="sidebar-subcategory">Premium Beauty</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-section">
+                <div class="logo-wraper">
+                    <div class="menu-icon" onclick="openSidebar()">☰</div>
+                    <div class="logo">
+                        <img src="./assets/meeshoLogo.svg" alt="logo" />
+                    </div>
+                </div>
+
+                <div class="header-icons">
+                    <div class="header-icon" onclick="toggleAuth()">
+                        <img src="./assets/wishlist-header.svg" alt="" />
+                    </div>
+                    <div class="header-icon" onclick="openCart()">
+                        <img src="./assets/cart-header.svg" alt="" />
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
 
     <!-- Product Image Section -->
     <div class="product-image-section">
