@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details - Mini Bazar</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f8f9fa;
-            overflow-x: hidden;
-        }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background-color: #f8f9fa;
+        overflow-x: hidden;
+      }
 
-        /* Sidebar Menu */
+      /* Sidebar Menu */
       .sidebar-overlay {
         position: fixed;
         top: 0;
@@ -163,8 +164,8 @@
         background: rgb(255, 231, 251);
       }
 
-        /* Header */
-        /* Browser Header Simulation */
+      /* Header */
+      /* Browser Header Simulation */
       .browser-header {
         background: #333;
         color: white;
@@ -321,502 +322,502 @@
         font-weight: bold;
       }
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
 
-        .back-btn {
-            font-size: 24px;
-            color: #333;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
+      .back-btn {
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: rgb(159, 32, 137);
-        }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(159, 32, 137);
+      }
 
-        .header-icons {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
+      .header-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
 
-        .header-icon {
-            font-size: 24px;
-            color: rgb(159, 32, 137);
-            cursor: pointer;
-            position: relative;
-        }
+      .header-icon {
+        font-size: 24px;
+        color: rgb(159, 32, 137);
+        cursor: pointer;
+        position: relative;
+      }
 
-        .cart-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #ff4757;
-            color: white;
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #ff4757;
+        color: white;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
 
-        /* Product Image Section */
-        .product-image-section {
-            background: white;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
+      /* Product Image Section */
+      .product-image-section {
+        background: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
 
+      .product-main-image {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 120px;
+        margin: 0 auto;
+        border: 1px solid #e0e0e0;
+      }
+
+      .wishlist-btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+      }
+
+      .wishlist-btn.active {
+        color: #ff4757;
+      }
+
+      .image-indicators {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      .indicator-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #e0e0e0;
+        cursor: pointer;
+      }
+
+      .indicator-dot.active {
+        background: rgb(159, 32, 137);
+      }
+
+      /* Product Details */
+      .product-details {
+        background: white;
+        padding: 20px;
+        margin-top: 10px;
+      }
+
+      .product-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+
+      .product-rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+      }
+
+      .rating-value {
+        background: #27ae60;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .rating-count {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .trusted-badge {
+        background: #ff4757;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: bold;
+      }
+
+      .product-price {
+        margin-bottom: 15px;
+      }
+
+      .current-price {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        margin-right: 10px;
+      }
+
+      .original-price {
+        font-size: 18px;
+        text-decoration: line-through;
+        color: #999;
+        margin-right: 10px;
+      }
+
+      .discount-percent {
+        font-size: 16px;
+        color: #27ae60;
+        font-weight: 600;
+      }
+
+      .offers-section {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .offers-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .offer-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .offer-icon {
+        color: #27ae60;
+        font-size: 16px;
+      }
+
+      /* Size Selection */
+      .size-section {
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 12px;
+      }
+
+      .size-options {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .size-option {
+        padding: 8px 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+
+      .size-option:hover {
+        border-color: rgb(159, 32, 137);
+      }
+
+      .size-option.selected {
+        background: rgb(159, 32, 137);
+        color: white;
+        border-color: rgb(159, 32, 137);
+      }
+
+      /* Product Description */
+      .description-section {
+        margin-bottom: 20px;
+      }
+
+      .description-content {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .show-more {
+        color: rgb(159, 32, 137);
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      /* Delivery Info */
+      .delivery-section {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .delivery-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .delivery-icon {
+        color: #27ae60;
+        font-size: 16px;
+      }
+
+      /* Action Buttons */
+      .action-buttons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 15px;
+        border-top: 1px solid #e0e0e0;
+        display: flex;
+        gap: 12px;
+        z-index: 100;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .add-to-cart-btn {
+        background: white;
+        color: rgb(159, 32, 137);
+        border: 2px solid rgb(159, 32, 137);
+      }
+
+      .add-to-cart-btn:hover {
+        background: #f0f0f0;
+      }
+
+      .buy-now-btn {
+        background: rgb(159, 32, 137);
+        color: white;
+      }
+
+      .buy-now-btn:hover {
+        background: #9333ea;
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background: white;
+        margin: 20% auto;
+        padding: 20px;
+        border-radius: 12px;
+        max-width: 90%;
+        width: 320px;
+        position: relative;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #999;
+      }
+
+      .modal h3 {
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 6px;
+        color: #333;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .input-group input:focus {
+        border-color: rgb(159, 32, 137);
+      }
+
+      .modal-btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        background: rgb(159, 32, 137);
+        color: white;
+        margin-top: 10px;
+      }
+
+      .auth-toggle {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+
+      .auth-toggle a {
+        color: rgb(159, 32, 137);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* UPI Payment Modal */
+      .upi-payment {
+        text-align: center;
+      }
+
+      .upi-amount {
+        font-size: 28px;
+        font-weight: bold;
+        color: rgb(159, 32, 137);
+        margin: 20px 0;
+      }
+
+      .upi-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 25px 0;
+      }
+
+      .upi-btn {
+        padding: 15px 10px;
+        border: 2px solid rgb(159, 32, 137);
+        background: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+
+      .upi-btn:hover {
+        background: rgb(159, 32, 137);
+        color: white;
+      }
+
+      .success-message {
+        background: #27ae60;
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        min-width: 280px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      /* Spacing for fixed buttons */
+      .content-spacer {
+        height: 80px;
+      }
+
+      /* Responsive */
+      @media (max-width: 480px) {
         .product-main-image {
-            width: 100%;
-            max-width: 350px;
-            height: 400px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 120px;
-            margin: 0 auto;
-            border: 1px solid #e0e0e0;
-        }
-
-        .wishlist-btn {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            background: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            font-size: 20px;
-        }
-
-        .wishlist-btn.active {
-            color: #ff4757;
-        }
-
-        .image-indicators {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        .indicator-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #e0e0e0;
-            cursor: pointer;
-        }
-
-        .indicator-dot.active {
-            background: rgb(159, 32, 137);
-        }
-
-        /* Product Details */
-        .product-details {
-            background: white;
-            padding: 20px;
-            margin-top: 10px;
-        }
-
-        .product-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #333;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .rating-value {
-            background: #27ae60;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .rating-count {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .trusted-badge {
-            background: #ff4757;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: bold;
-        }
-
-        .product-price {
-            margin-bottom: 15px;
-        }
-
-        .current-price {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-            margin-right: 10px;
-        }
-
-        .original-price {
-            font-size: 18px;
-            text-decoration: line-through;
-            color: #999;
-            margin-right: 10px;
-        }
-
-        .discount-percent {
-            font-size: 16px;
-            color: #27ae60;
-            font-weight: 600;
-        }
-
-        .offers-section {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .offers-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .offer-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .offer-icon {
-            color: #27ae60;
-            font-size: 16px;
-        }
-
-        /* Size Selection */
-        .size-section {
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 12px;
-        }
-
-        .size-options {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .size-option {
-            padding: 8px 16px;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            background: white;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .size-option:hover {
-            border-color: rgb(159, 32, 137);
-        }
-
-        .size-option.selected {
-            background: rgb(159, 32, 137);
-            color: white;
-            border-color: rgb(159, 32, 137);
-        }
-
-        /* Product Description */
-        .description-section {
-            margin-bottom: 20px;
-        }
-
-        .description-content {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .show-more {
-            color: rgb(159, 32, 137);
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        /* Delivery Info */
-        .delivery-section {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .delivery-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .delivery-icon {
-            color: #27ae60;
-            font-size: 16px;
-        }
-
-        /* Action Buttons */
-        .action-buttons {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 15px;
-            border-top: 1px solid #e0e0e0;
-            display: flex;
-            gap: 12px;
-            z-index: 100;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 15px 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .add-to-cart-btn {
-            background: white;
-            color: rgb(159, 32, 137);
-            border: 2px solid rgb(159, 32, 137);
-        }
-
-        .add-to-cart-btn:hover {
-            background: #f0f0f0;
-        }
-
-        .buy-now-btn {
-            background: rgb(159, 32, 137);
-            color: white;
-        }
-
-        .buy-now-btn:hover {
-            background: #9333ea;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
+          height: 300px;
+          font-size: 100px;
         }
 
         .modal-content {
-            background: white;
-            margin: 20% auto;
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 90%;
-            width: 320px;
-            position: relative;
+          margin: 10% auto;
+          width: 95%;
         }
-
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .modal h3 {
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 6px;
-            color: #333;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-        }
-
-        .input-group input:focus {
-            border-color: rgb(159, 32, 137);
-        }
-
-        .modal-btn {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            background: rgb(159, 32, 137);
-            color: white;
-            margin-top: 10px;
-        }
-
-        .auth-toggle {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .auth-toggle a {
-            color: rgb(159, 32, 137);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* UPI Payment Modal */
-        .upi-payment {
-            text-align: center;
-        }
-
-        .upi-amount {
-            font-size: 28px;
-            font-weight: bold;
-            color: rgb(159, 32, 137);
-            margin: 20px 0;
-        }
-
-        .upi-buttons {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin: 25px 0;
-        }
-
-        .upi-btn {
-            padding: 15px 10px;
-            border: 2px solid rgb(159, 32, 137);
-            background: white;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-
-        .upi-btn:hover {
-            background: rgb(159, 32, 137);
-            color: white;
-        }
-
-        .success-message {
-            background: #27ae60;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999;
-            min-width: 280px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        /* Spacing for fixed buttons */
-        .content-spacer {
-            height: 80px;
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            .product-main-image {
-                height: 300px;
-                font-size: 100px;
-            }
-            
-            .modal-content {
-                margin: 10% auto;
-                width: 95%;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
-        <header class="header">
-            <!-- Browser Header Simulation -->
-            <!-- <div class="browser-header">
+    <header class="header">
+      <!-- Browser Header Simulation -->
+      <!-- <div class="browser-header">
                 <div class="browser-left">
                         <span>✕</span>
                         <span>⌄</span>
@@ -828,737 +829,837 @@
                 </div>
         </div> -->
 
-            <!-- App Download Banner -->
-            <div class="app-banner" id="appBanner">
-                <div class="banner-left">
-                    <div class="app-icon">
-                        <img src="./assets/banner-mobile-logo.svg" alt="" />
-                    </div>
-                    <div class="banner-text">
-                        <h4>Extra 20% off on First Order</h4>
-                        <p>Only on app</p>
-                    </div>
-                </div>
-                <div>
-                    <button class="download-btn">Download Now</button>
-                    <button class="close-banner" onclick="closeBanner()">&times;</button>
-                </div>
+      <!-- App Download Banner -->
+      <div class="app-banner" id="appBanner">
+        <div class="banner-left">
+          <div class="app-icon">
+            <img src="./assets/banner-mobile-logo.svg" alt="" />
+          </div>
+          <div class="banner-text">
+            <h4>Extra 20% off on First Order</h4>
+            <p>Only on app</p>
+          </div>
+        </div>
+        <div>
+          <button class="download-btn">Download Now</button>
+          <button class="close-banner" onclick="closeBanner()">&times;</button>
+        </div>
+      </div>
+
+      <!-- Sidebar Overlay -->
+      <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+        onclick="closeSidebar()"
+      ></div>
+
+      <!-- Sidebar Menu -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-logo">
+            <img src="./assets/meeshoLogo.svg" alt="messho logo" />
+          </div>
+          <button class="sidebar-close" onclick="closeSidebar()">
+            &times;
+          </button>
+        </div>
+        <div class="sidebar-content">
+          <div class="sidebar-section">
+            <div class="sidebar-category" onclick="toggleSubcategories(this)">
+              <div class="sidebar-category-icon cat-women-ethnic">👗</div>
+              <div class="sidebar-category-text">
+                <div class="sidebar-category-title">Women Ethnic</div>
+                <div class="sidebar-category-subtitle">All Categories</div>
+              </div>
             </div>
-
-            <!-- Sidebar Overlay -->
-            <div
-                class="sidebar-overlay"
-                id="sidebarOverlay"
-                onclick="closeSidebar()"
-            ></div>
-
-            <!-- Sidebar Menu -->
-            <div class="sidebar" id="sidebar">
-                <div class="sidebar-header">
-                    <div class="sidebar-logo">
-                        <img src="./assets/meeshoLogo.svg" alt="messho logo" />
-                    </div>
-                    <button class="sidebar-close" onclick="closeSidebar()">
-                        &times;
-                    </button>
-                </div>
-                <div class="sidebar-content">
-                    <div class="sidebar-section">
-                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
-                            <div class="sidebar-category-icon cat-women-ethnic">👗</div>
-                            <div class="sidebar-category-text">
-                                <div class="sidebar-category-title">Women Ethnic</div>
-                                <div class="sidebar-category-subtitle">All Categories</div>
-                            </div>
-                        </div>
-                        <div class="sidebar-subcategories">
-                            <div class="sidebar-subcategory">Cotton Kurtis</div>
-                            <div class="sidebar-subcategory">Chikankari Kurtis</div>
-                            <div class="sidebar-subcategory">All Kurta Sets</div>
-                            <div class="sidebar-subcategory">Kurta Palazzo Sets</div>
-                            <div class="sidebar-subcategory">Rayon Kurta Sets</div>
-                            <div class="sidebar-subcategory">Kurta Pant Sets</div>
-                            <div class="sidebar-subcategory">Cotton Kurta Sets</div>
-                            <div class="sidebar-subcategory">Sharara Sets</div>
-                            <div class="sidebar-subcategory">Cotton Sets</div>
-                            <div class="sidebar-subcategory">Rayon Sets</div>
-                            <div class="sidebar-subcategory">Printed Sets</div>
-                            <div class="sidebar-subcategory">All Suits & Dress Material</div>
-                            <div class="sidebar-subcategory">Cotton Suits</div>
-                            <div class="sidebar-subcategory">Embroidered Suits</div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
-                            <div class="sidebar-category-icon cat-women-western">👖</div>
-                            <div class="sidebar-category-text">
-                                <div class="sidebar-category-title">Women Western</div>
-                                <div class="sidebar-category-subtitle">
-                                    Tops, Dresses & More
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidebar-subcategories">
-                            <div class="sidebar-subcategory">Tops & Tunics</div>
-                            <div class="sidebar-subcategory">Dresses</div>
-                            <div class="sidebar-subcategory">Jeans</div>
-                            <div class="sidebar-subcategory">Trousers & Pants</div>
-                            <div class="sidebar-subcategory">Skirts</div>
-                            <div class="sidebar-subcategory">Co-ord Sets</div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
-                            <div class="sidebar-category-icon cat-men">👕</div>
-                            <div class="sidebar-category-text">
-                                <div class="sidebar-category-title">Men</div>
-                                <div class="sidebar-category-subtitle">
-                                    Top Wear, Bottom Wear & More
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidebar-subcategories">
-                            <div class="sidebar-subcategory">Top Wear</div>
-                            <div class="sidebar-subcategory">Bottom Wear</div>
-                            <div class="sidebar-subcategory">Men's Grooming</div>
-                            <div class="sidebar-subcategory">Ethnic Wear</div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
-                            <div class="sidebar-category-icon cat-kids">🧸</div>
-                            <div class="sidebar-category-text">
-                                <div class="sidebar-category-title">Kids</div>
-                                <div class="sidebar-category-subtitle">
-                                    0 to 14 Years Kids Clothing
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidebar-subcategories">
-                            <div class="sidebar-subcategory">Boys Clothing</div>
-                            <div class="sidebar-subcategory">Girls Clothing</div>
-                            <div class="sidebar-subcategory">Footwear</div>
-                            <div class="sidebar-subcategory">Toys</div>
-                            <div class="sidebar-subcategory">Baby Care</div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
-                            <div class="sidebar-category-icon cat-home-kitchen">🏠</div>
-                            <div class="sidebar-category-text">
-                                <div class="sidebar-category-title">Home & Kitchen</div>
-                                <div class="sidebar-category-subtitle">Everything You Need</div>
-                            </div>
-                        </div>
-                        <div class="sidebar-subcategories">
-                            <div class="sidebar-subcategory">Kitchen & Dining</div>
-                            <div class="sidebar-subcategory">Home Decor</div>
-                            <div class="sidebar-subcategory">Home Improvement</div>
-                            <div class="sidebar-subcategory">Storage</div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <div class="sidebar-category" onclick="toggleSubcategories(this)">
-                            <div class="sidebar-category-icon cat-beauty-health">💄</div>
-                            <div class="sidebar-category-text">
-                                <div class="sidebar-category-title">Beauty & Health</div>
-                                <div class="sidebar-category-subtitle">
-                                    Makeup, Skincare & More
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidebar-subcategories">
-                            <div class="sidebar-subcategory">Make up</div>
-                            <div class="sidebar-subcategory">Wellness</div>
-                            <div class="sidebar-subcategory">Skincare</div>
-                            <div class="sidebar-subcategory">Premium Beauty</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="sidebar-subcategories">
+              <div class="sidebar-subcategory">Cotton Kurtis</div>
+              <div class="sidebar-subcategory">Chikankari Kurtis</div>
+              <div class="sidebar-subcategory">All Kurta Sets</div>
+              <div class="sidebar-subcategory">Kurta Palazzo Sets</div>
+              <div class="sidebar-subcategory">Rayon Kurta Sets</div>
+              <div class="sidebar-subcategory">Kurta Pant Sets</div>
+              <div class="sidebar-subcategory">Cotton Kurta Sets</div>
+              <div class="sidebar-subcategory">Sharara Sets</div>
+              <div class="sidebar-subcategory">Cotton Sets</div>
+              <div class="sidebar-subcategory">Rayon Sets</div>
+              <div class="sidebar-subcategory">Printed Sets</div>
+              <div class="sidebar-subcategory">All Suits & Dress Material</div>
+              <div class="sidebar-subcategory">Cotton Suits</div>
+              <div class="sidebar-subcategory">Embroidered Suits</div>
             </div>
-            <div class="logo-section">
-                <div class="logo-wraper">
-                    <div class="menu-icon" onclick="openSidebar()">☰</div>
-                    <div class="logo">
-                        <img src="./assets/meeshoLogo.svg" alt="logo" />
-                    </div>
-                </div>
+          </div>
 
-                <div class="header-icons">
-                    <div class="header-icon" onclick="toggleAuth()">
-                        <img src="./assets/wishlist-header.svg" alt="" />
-                    </div>
-                    <div class="header-icon" onclick="openCart()">
-                        <img src="./assets/cart-header.svg" alt="" />
-                        <span class="cart-badge" id="cartBadge">0</span>
-                    </div>
+          <div class="sidebar-section">
+            <div class="sidebar-category" onclick="toggleSubcategories(this)">
+              <div class="sidebar-category-icon cat-women-western">👖</div>
+              <div class="sidebar-category-text">
+                <div class="sidebar-category-title">Women Western</div>
+                <div class="sidebar-category-subtitle">
+                  Tops, Dresses & More
                 </div>
+              </div>
             </div>
-        </header>
+            <div class="sidebar-subcategories">
+              <div class="sidebar-subcategory">Tops & Tunics</div>
+              <div class="sidebar-subcategory">Dresses</div>
+              <div class="sidebar-subcategory">Jeans</div>
+              <div class="sidebar-subcategory">Trousers & Pants</div>
+              <div class="sidebar-subcategory">Skirts</div>
+              <div class="sidebar-subcategory">Co-ord Sets</div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-category" onclick="toggleSubcategories(this)">
+              <div class="sidebar-category-icon cat-men">👕</div>
+              <div class="sidebar-category-text">
+                <div class="sidebar-category-title">Men</div>
+                <div class="sidebar-category-subtitle">
+                  Top Wear, Bottom Wear & More
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-subcategories">
+              <div class="sidebar-subcategory">Top Wear</div>
+              <div class="sidebar-subcategory">Bottom Wear</div>
+              <div class="sidebar-subcategory">Men's Grooming</div>
+              <div class="sidebar-subcategory">Ethnic Wear</div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-category" onclick="toggleSubcategories(this)">
+              <div class="sidebar-category-icon cat-kids">🧸</div>
+              <div class="sidebar-category-text">
+                <div class="sidebar-category-title">Kids</div>
+                <div class="sidebar-category-subtitle">
+                  0 to 14 Years Kids Clothing
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-subcategories">
+              <div class="sidebar-subcategory">Boys Clothing</div>
+              <div class="sidebar-subcategory">Girls Clothing</div>
+              <div class="sidebar-subcategory">Footwear</div>
+              <div class="sidebar-subcategory">Toys</div>
+              <div class="sidebar-subcategory">Baby Care</div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-category" onclick="toggleSubcategories(this)">
+              <div class="sidebar-category-icon cat-home-kitchen">🏠</div>
+              <div class="sidebar-category-text">
+                <div class="sidebar-category-title">Home & Kitchen</div>
+                <div class="sidebar-category-subtitle">Everything You Need</div>
+              </div>
+            </div>
+            <div class="sidebar-subcategories">
+              <div class="sidebar-subcategory">Kitchen & Dining</div>
+              <div class="sidebar-subcategory">Home Decor</div>
+              <div class="sidebar-subcategory">Home Improvement</div>
+              <div class="sidebar-subcategory">Storage</div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-category" onclick="toggleSubcategories(this)">
+              <div class="sidebar-category-icon cat-beauty-health">💄</div>
+              <div class="sidebar-category-text">
+                <div class="sidebar-category-title">Beauty & Health</div>
+                <div class="sidebar-category-subtitle">
+                  Makeup, Skincare & More
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-subcategories">
+              <div class="sidebar-subcategory">Make up</div>
+              <div class="sidebar-subcategory">Wellness</div>
+              <div class="sidebar-subcategory">Skincare</div>
+              <div class="sidebar-subcategory">Premium Beauty</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-section">
+        <div class="logo-wraper">
+          <div class="menu-icon" onclick="openSidebar()">☰</div>
+          <div class="logo">
+            <img src="./assets/meeshoLogo.svg" alt="logo" />
+          </div>
+        </div>
+
+        <div class="header-icons">
+          <div class="header-icon" onclick="toggleAuth()">
+            <img src="./assets/wishlist-header.svg" alt="" />
+          </div>
+          <div class="header-icon" onclick="openCart()">
+            <img src="./assets/cart-header.svg" alt="" />
+            <span class="cart-badge" id="cartBadge">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!-- Product Image Section -->
     <div class="product-image-section">
-        <div class="product-main-image" id="productImage">👕</div>
-        <button class="wishlist-btn" id="wishlistBtn" onclick="toggleWishlist()">🤍</button>
-        <div class="image-indicators">
-            <div class="indicator-dot active"></div>
-            <div class="indicator-dot"></div>
-            <div class="indicator-dot"></div>
-        </div>
+      <div class="product-main-image" id="productImage">👕</div>
+      <button class="wishlist-btn" id="wishlistBtn" onclick="toggleWishlist()">
+        🤍
+      </button>
+      <div class="image-indicators">
+        <div class="indicator-dot active"></div>
+        <div class="indicator-dot"></div>
+        <div class="indicator-dot"></div>
+      </div>
     </div>
 
     <!-- Product Details -->
     <div class="product-details">
-        <h1 class="product-title" id="productTitle">Trendy Graceful Women Tops & Tunics</h1>
-        
-        <div class="product-rating">
-            <span class="rating-value" id="productRating">4.0 ⭐</span>
-            <span class="rating-count" id="ratingCount">(55,687)</span>
-            <span class="trusted-badge">🔥 Trusted</span>
-        </div>
+      <h1 class="product-title" id="productTitle">
+        Trendy Graceful Women Tops & Tunics
+      </h1>
 
-        <div class="product-price">
-            <span class="current-price" id="currentPrice">₹289</span>
-            <span class="original-price" id="originalPrice">₹1200</span>
-            <span class="discount-percent" id="discountPercent">76% off</span>
-        </div>
+      <div class="product-rating">
+        <span class="rating-value" id="productRating">4.0 ⭐</span>
+        <span class="rating-count" id="ratingCount">(55,687)</span>
+        <span class="trusted-badge">🔥 Trusted</span>
+      </div>
 
-        <div class="offers-section">
-            <div class="offers-title">Special Offers</div>
-            <div class="offer-item">
-                <span class="offer-icon">✅</span>
-                <span>Extra 20% off on First Order</span>
-            </div>
-            <div class="offer-item">
-                <span class="offer-icon">💳</span>
-                <span>Bank Offer: 10% instant discount with HDFC cards</span>
-            </div>
-            <div class="offer-item">
-                <span class="offer-icon">🚚</span>
-                <span>Free delivery on orders above ₹499</span>
-            </div>
-        </div>
+      <div class="product-price">
+        <span class="current-price" id="currentPrice">₹289</span>
+        <span class="original-price" id="originalPrice">₹1200</span>
+        <span class="discount-percent" id="discountPercent">76% off</span>
+      </div>
 
-        <div class="size-section">
-            <div class="section-title">Size</div>
-            <div class="size-options">
-                <div class="size-option" onclick="selectSize(this)">S</div>
-                <div class="size-option selected" onclick="selectSize(this)">M</div>
-                <div class="size-option" onclick="selectSize(this)">L</div>
-                <div class="size-option" onclick="selectSize(this)">XL</div>
-                <div class="size-option" onclick="selectSize(this)">XXL</div>
-            </div>
+      <div class="offers-section">
+        <div class="offers-title">Special Offers</div>
+        <div class="offer-item">
+          <span class="offer-icon">✅</span>
+          <span>Extra 20% off on First Order</span>
         </div>
+        <div class="offer-item">
+          <span class="offer-icon">💳</span>
+          <span>Bank Offer: 10% instant discount with HDFC cards</span>
+        </div>
+        <div class="offer-item">
+          <span class="offer-icon">🚚</span>
+          <span>Free delivery on orders above ₹499</span>
+        </div>
+      </div>
 
-        <div class="description-section">
-            <div class="section-title">Product Details</div>
-            <div class="description-content">
-                Made from premium cotton blend fabric, this stylish top is perfect for casual and semi-formal occasions. Features comfortable fit, elegant design, and durable construction. Machine washable. <a href="#" class="show-more">Show more</a>
-            </div>
+      <div class="size-section">
+        <div class="section-title">Size</div>
+        <div class="size-options">
+          <div class="size-option" onclick="selectSize(this)">S</div>
+          <div class="size-option selected" onclick="selectSize(this)">M</div>
+          <div class="size-option" onclick="selectSize(this)">L</div>
+          <div class="size-option" onclick="selectSize(this)">XL</div>
+          <div class="size-option" onclick="selectSize(this)">XXL</div>
         </div>
+      </div>
 
-        <div class="delivery-section">
-            <div class="delivery-item">
-                <span class="delivery-icon">🚚</span>
-                <span>Free delivery by 25th Aug 2025</span>
-            </div>
-            <div class="delivery-item">
-                <span class="delivery-icon">↩️</span>
-                <span>7 days return & exchange policy</span>
-            </div>
-            <div class="delivery-item">
-                <span class="delivery-icon">💯</span>
-                <span>100% Original & Quality Assured</span>
-            </div>
+      <div class="description-section">
+        <div class="section-title">Product Details</div>
+        <div class="description-content">
+          Made from premium cotton blend fabric, this stylish top is perfect for
+          casual and semi-formal occasions. Features comfortable fit, elegant
+          design, and durable construction. Machine washable.
+          <a href="#" class="show-more">Show more</a>
         </div>
+      </div>
+
+      <div class="delivery-section">
+        <div class="delivery-item">
+          <span class="delivery-icon">🚚</span>
+          <span>Free delivery by 25th Aug 2025</span>
+        </div>
+        <div class="delivery-item">
+          <span class="delivery-icon">↩️</span>
+          <span>7 days return & exchange policy</span>
+        </div>
+        <div class="delivery-item">
+          <span class="delivery-icon">💯</span>
+          <span>100% Original & Quality Assured</span>
+        </div>
+      </div>
     </div>
 
     <div class="content-spacer"></div>
 
     <!-- Action Buttons -->
     <div class="action-buttons">
-        <button class="btn add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-        <button class="btn buy-now-btn" onclick="buyNow()">Buy Now</button>
+      <button class="btn add-to-cart-btn" onclick="addToCart()">
+        Add to Cart
+      </button>
+      <button class="btn buy-now-btn" onclick="buyNow()">Buy Now</button>
     </div>
 
     <!-- Auth Modal -->
     <div class="modal" id="authModal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('authModal')">&times;</button>
-            <div id="loginForm">
-                <h3>Login to Mini Bazar</h3>
-                <div class="input-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="loginPhone" placeholder="Enter your phone number">
-                </div>
-                <div class="input-group">
-                    <label>Password</label>
-                    <input type="password" id="loginPassword" placeholder="Enter your password">
-                </div>
-                <button class="modal-btn" onclick="login()">Login</button>
-                <div class="auth-toggle">
-                    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
-                </div>
-            </div>
-
-            <div id="signupForm" class="hidden">
-                <h3>Create Account</h3>
-                <div class="input-group">
-                    <label>Full Name</label>
-                    <input type="text" id="signupName" placeholder="Enter your full name">
-                </div>
-                <div class="input-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="signupPhone" placeholder="Enter your phone number">
-                </div>
-                <div class="input-group">
-                    <label>Password</label>
-                    <input type="password" id="signupPassword" placeholder="Create a password">
-                </div>
-                <button class="modal-btn" onclick="signup()">Sign Up</button>
-                <div class="auth-toggle">
-                    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-                </div>
-            </div>
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('authModal')">
+          &times;
+        </button>
+        <div id="loginForm">
+          <h3>Login to Mini Bazar</h3>
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              id="loginPhone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your password"
+            />
+          </div>
+          <button class="modal-btn" onclick="login()">Login</button>
+          <div class="auth-toggle">
+            <p>
+              Don't have an account?
+              <a href="#" onclick="showSignup()">Sign up</a>
+            </p>
+          </div>
         </div>
+
+        <div id="signupForm" class="hidden">
+          <h3>Create Account</h3>
+          <div class="input-group">
+            <label>Full Name</label>
+            <input
+              type="text"
+              id="signupName"
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              id="signupPhone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              id="signupPassword"
+              placeholder="Create a password"
+            />
+          </div>
+          <button class="modal-btn" onclick="signup()">Sign Up</button>
+          <div class="auth-toggle">
+            <p>
+              Already have an account?
+              <a href="#" onclick="showLogin()">Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- UPI Payment Modal -->
     <div class="modal" id="upiModal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('upiModal')">&times;</button>
-            <div class="upi-payment">
-                <h3>Complete Payment</h3>
-                <div class="upi-amount">₹<span id="paymentAmount">289</span></div>
-                <p style="margin: 15px 0; color: #666">Choose your UPI app:</p>
-                <div class="upi-buttons">
-                    <div class="upi-btn" onclick="payWithUPI('phonepe')">📱 PhonePe</div>
-                    <div class="upi-btn" onclick="payWithUPI('googlepay')">💳 Google Pay</div>
-                    <div class="upi-btn" onclick="payWithUPI('paytm')">💰 Paytm</div>
-                    <div class="upi-btn" onclick="payWithUPI('amazon')">📦 Amazon Pay</div>
-                </div>
-                <p style="font-size: 12px; color: #999; margin-top: 15px">
-                    You will be redirected to your UPI app to complete the payment
-                </p>
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('upiModal')">
+          &times;
+        </button>
+        <div class="upi-payment">
+          <h3>Complete Payment</h3>
+          <div class="upi-amount">₹<span id="paymentAmount">289</span></div>
+          <p style="margin: 15px 0; color: #666">Choose your UPI app:</p>
+          <div class="upi-buttons">
+            <div class="upi-btn" onclick="payWithUPI('phonepe')">
+              📱 PhonePe
             </div>
+            <div class="upi-btn" onclick="payWithUPI('googlepay')">
+              💳 Google Pay
+            </div>
+            <div class="upi-btn" onclick="payWithUPI('paytm')">💰 Paytm</div>
+            <div class="upi-btn" onclick="payWithUPI('amazon')">
+              📦 Amazon Pay
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #999; margin-top: 15px">
+            You will be redirected to your UPI app to complete the payment
+          </p>
         </div>
+      </div>
     </div>
 
     <script>
-        // Get product ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id') || '1';
+      // Get product ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id") || "1";
 
-        // Sample product data
-        const products = {
-            '1': {
-                id: 1,
-                title: "Elita Chunky Rakhi",
-                currentPrice: 30,
-                originalPrice: 300,
-                discount: "47%",
-                rating: 4.5,
-                ratingCount: 9337,
-                image: "./assets/products/1.webp",
-            },
-            '2': {
-                id: 2,
-                title: "Cutegirls Trendy Boys Top & Bottom Co-ord Set",
-                currentPrice: 207,
-                originalPrice: 999,
-                discount: "79%",
-                rating: 4.4,
-                ratingCount: 23558,
-                image: "./assets/products/2.webp",
-            },
-            '3': {
-                id: 3,
-                title: "Stylish Retro Men Shirts",
-                currentPrice: 310,
-                originalPrice: 1299,
-                discount: "76%",
-                rating: 3.6,
-                ratingCount: 13241,
-                image: "./assets/products/3.webp",
-            },
-            '4': {
-                id: 4,
-                title: "Trendy Graceful Women Tops & Tunics",
-                currentPrice: 289,
-                originalPrice: 1200,
-                discount: "76%",
-                rating: 4.0,
-                ratingCount: 55687,
-                image: "./assets/products/4.webp",
-            },
-            '5': {
-                id: 5,
-                title: "Elegant Women's Dress",
-                currentPrice: 499,
-                originalPrice: 1999,
-                discount: "75%",
-                rating: 4.8,
-                ratingCount: 12345,
-                image: "./assets/products/5.webp",
-            },
-            '6': {
-                id: 6,
-                title: "Casual Men's T-Shirt",
-                currentPrice: 299,
-                originalPrice: 999,
-                discount: "70%",
-                rating: 4.2,
-                ratingCount: 6789,
-                image: "./assets/products/6.webp",
-            },
-            '7': {
-                id: 7,
-                title: "Stylish Backpack",
-                currentPrice: 899,
-                originalPrice: 1999,
-                discount: "55%",
-                rating: 4.5,
-                ratingCount: 2345,
-                image: "./assets/products/7.webp",
-            },
-            '8': {
-                id: 8,
-                title: "Trendy Sunglasses",
-                currentPrice: 199,
-                originalPrice: 799,
-                discount: "75%",
-                rating: 4.0,
-                ratingCount: 4567,
-                image: "./assets/products/8.webp",
-            },
-            '9': {
-                id: 9,
-                title: "Casual Women's Top",
-                currentPrice: 299,
-                originalPrice: 999,
-                discount: "70%",
-                rating: 4.2,
-                ratingCount: 6789,
-                image: "./assets/products/9.webp",
-            }
+      // Sample product data
+      const products = {
+        1: {
+          id: 1,
+          title: "Elita Chunky Rakhi",
+          currentPrice: 30,
+          originalPrice: 300,
+          discount: "47%",
+          rating: 4.5,
+          ratingCount: 9337,
+          image: "./assets/products/1.webp",
+        },
+        2: {
+          id: 2,
+          title: "Cutegirls Trendy Boys Top & Bottom Co-ord Set",
+          currentPrice: 207,
+          originalPrice: 999,
+          discount: "79%",
+          rating: 4.4,
+          ratingCount: 23558,
+          image: "./assets/products/2.webp",
+        },
+        3: {
+          id: 3,
+          title: "Stylish Retro Men Shirts",
+          currentPrice: 310,
+          originalPrice: 1299,
+          discount: "76%",
+          rating: 3.6,
+          ratingCount: 13241,
+          image: "./assets/products/3.webp",
+        },
+        4: {
+          id: 4,
+          title: "Trendy Graceful Women Tops & Tunics",
+          currentPrice: 289,
+          originalPrice: 1200,
+          discount: "76%",
+          rating: 4.0,
+          ratingCount: 55687,
+          image: "./assets/products/4.webp",
+        },
+        5: {
+          id: 5,
+          title: "Elegant Women's Dress",
+          currentPrice: 499,
+          originalPrice: 1999,
+          discount: "75%",
+          rating: 4.8,
+          ratingCount: 12345,
+          image: "./assets/products/5.webp",
+        },
+        6: {
+          id: 6,
+          title: "Casual Men's T-Shirt",
+          currentPrice: 299,
+          originalPrice: 999,
+          discount: "70%",
+          rating: 4.2,
+          ratingCount: 6789,
+          image: "./assets/products/6.webp",
+        },
+        7: {
+          id: 7,
+          title: "Stylish Backpack",
+          currentPrice: 899,
+          originalPrice: 1999,
+          discount: "55%",
+          rating: 4.5,
+          ratingCount: 2345,
+          image: "./assets/products/7.webp",
+        },
+        8: {
+          id: 8,
+          title: "Trendy Sunglasses",
+          currentPrice: 199,
+          originalPrice: 799,
+          discount: "75%",
+          rating: 4.0,
+          ratingCount: 4567,
+          image: "./assets/products/8.webp",
+        },
+        9: {
+          id: 9,
+          title: "Casual Women's Top",
+          currentPrice: 299,
+          originalPrice: 999,
+          discount: "70%",
+          rating: 4.2,
+          ratingCount: 6789,
+          image: "./assets/products/9.webp",
+        },
+      };
+
+      // App state
+      let currentUser = JSON.parse(
+        localStorage.getItem("currentUser") || "null"
+      );
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      let wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+      let currentProduct = products[productId];
+      let selectedSize = "M";
+
+      // Initialize page
+      document.addEventListener("DOMContentLoaded", function () {
+        loadProduct();
+        updateCartBadge();
+        updateWishlistButton();
+      });
+
+      function loadProduct() {
+        if (!currentProduct) {
+          currentProduct = products["4"]; // Default product
+        }
+
+        // Set product image as an <img> element
+        const productImageDiv = document.getElementById("productImage");
+        productImageDiv.innerHTML = `<img src="${currentProduct.image}" alt="${currentProduct.title}" style="max-width:100%;max-height:100%;object-fit:contain;">`;
+
+        document.getElementById("productTitle").textContent =
+          currentProduct.title;
+        document.getElementById(
+          "productRating"
+        ).textContent = `${currentProduct.rating} ⭐`;
+        document.getElementById(
+          "ratingCount"
+        ).textContent = `(${currentProduct.ratingCount.toLocaleString()})`;
+        document.getElementById(
+          "currentPrice"
+        ).textContent = `₹${currentProduct.currentPrice}`;
+        document.getElementById(
+          "originalPrice"
+        ).textContent = `₹${currentProduct.originalPrice}`;
+        document.getElementById(
+          "discountPercent"
+        ).textContent = `${currentProduct.discount} off`;
+        document.getElementById("paymentAmount").textContent =
+          currentProduct.currentPrice;
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+
+      function selectSize(element) {
+        document.querySelectorAll(".size-option").forEach((option) => {
+          option.classList.remove("selected");
+        });
+        element.classList.add("selected");
+        selectedSize = element.textContent;
+      }
+
+      function toggleWishlist() {
+        if (!currentUser) {
+          alert("Please login first to add items to wishlist");
+          toggleAuth();
+          return;
+        }
+
+        const index = wishlist.indexOf(currentProduct.id);
+        if (index > -1) {
+          wishlist.splice(index, 1);
+          showSuccessMessage("Removed from wishlist");
+        } else {
+          wishlist.push(currentProduct.id);
+          showSuccessMessage("Added to wishlist ❤️");
+        }
+
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        updateWishlistButton();
+      }
+
+      function updateWishlistButton() {
+        const btn = document.getElementById("wishlistBtn");
+        btn.textContent = wishlist.includes(currentProduct.id) ? "❤️" : "🤍";
+      }
+
+      function addToCart() {
+        if (!currentUser) {
+          alert("Please login first to add items to cart");
+          toggleAuth();
+          return;
+        }
+
+        const existingItem = cart.find(
+          (item) => item.id === currentProduct.id && item.size === selectedSize
+        );
+
+        if (existingItem) {
+          existingItem.quantity += 1;
+          showSuccessMessage("Cart updated! Quantity increased");
+        } else {
+          cart.push({
+            ...currentProduct,
+            quantity: 1,
+            size: selectedSize,
+          });
+          showSuccessMessage("Item added to cart! 🛒");
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartBadge();
+      }
+
+      function buyNow() {
+        if (!currentUser) {
+          alert("Please login first to proceed");
+          toggleAuth();
+          return;
+        }
+
+        // Add to cart if not already present
+        const existingItem = cart.find(
+          (item) => item.id === currentProduct.id && item.size === selectedSize
+        );
+        if (!existingItem) {
+          cart.push({
+            ...currentProduct,
+            quantity: 1,
+            size: selectedSize,
+          });
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateCartBadge();
+        }
+
+        // Open UPI payment modal
+        document.getElementById("upiModal").style.display = "block";
+      }
+
+      function updateCartBadge() {
+        const badge = document.getElementById("cartBadge");
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        badge.textContent = totalItems;
+        badge.style.display = totalItems > 0 ? "flex" : "none";
+      }
+
+      // Authentication functions
+      function toggleAuth() {
+        if (currentUser) {
+          logout();
+        } else {
+          document.getElementById("authModal").style.display = "block";
+        }
+      }
+
+      function showLogin() {
+        document.getElementById("loginForm").classList.remove("hidden");
+        document.getElementById("signupForm").classList.add("hidden");
+      }
+
+      function showSignup() {
+        document.getElementById("signupForm").classList.remove("hidden");
+        document.getElementById("loginForm").classList.add("hidden");
+      }
+
+      function login() {
+        const phone = document.getElementById("loginPhone").value.trim();
+        const password = document.getElementById("loginPassword").value.trim();
+
+        if (!phone || !password) {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        if (phone.length < 10 || isNaN(phone)) {
+          alert("Please enter a valid 10-digit phone number");
+          return;
+        }
+
+        if (password.length < 6) {
+          alert("Password must be at least 6 characters long");
+          return;
+        }
+
+        currentUser = {
+          name: phone.substring(0, 3) + "xxxxx" + phone.substring(8),
+          phone: phone,
         };
 
-        // App state
-        let currentUser = JSON.parse(localStorage.getItem('currentUser') || 'null');
-        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-        let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
-        let currentProduct = products[productId];
-        let selectedSize = 'M';
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            loadProduct();
+        document.getElementById("loginPhone").value = "";
+        document.getElementById("loginPassword").value = "";
+
+        closeModal("authModal");
+        showSuccessMessage("✅ Login successful! Welcome to Mini Bazar");
+      }
+
+      function signup() {
+        const name = document.getElementById("signupName").value.trim();
+        const phone = document.getElementById("signupPhone").value.trim();
+        const password = document.getElementById("signupPassword").value.trim();
+
+        if (!name || !phone || !password) {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        if (name.length < 2) {
+          alert("Please enter a valid name");
+          return;
+        }
+
+        if (phone.length < 10 || isNaN(phone)) {
+          alert("Please enter a valid 10-digit phone number");
+          return;
+        }
+
+        if (password.length < 6) {
+          alert("Password must be at least 6 characters long");
+          return;
+        }
+
+        currentUser = {
+          name: name,
+          phone: phone,
+        };
+
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+        document.getElementById("signupName").value = "";
+        document.getElementById("signupPhone").value = "";
+        document.getElementById("signupPassword").value = "";
+
+        closeModal("authModal");
+        showSuccessMessage(
+          "🎉 Account created successfully! Welcome to Mini Bazar"
+        );
+      }
+
+      function logout() {
+        currentUser = null;
+        cart = [];
+        wishlist = [];
+        localStorage.removeItem("currentUser");
+        localStorage.removeItem("cart");
+        localStorage.removeItem("wishlist");
+        updateCartBadge();
+        updateWishlistButton();
+        showSuccessMessage("Logged out successfully");
+      }
+
+      function openCart() {
+        window.location.href = "index.html";
+      }
+
+      // UPI Payment functions
+      function payWithUPI(app) {
+        const amount = document.getElementById("paymentAmount").textContent;
+        const upiId = "vijaypal-70@ptyes";
+        const note = "MiniBazar Purchase";
+
+        let upiUrl;
+        switch (app) {
+          case "phonepe":
+            // PhonePe personal payment format
+            upiUrl = `phonepe://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
+              note
+            )}&cu=INR`;
+            break;
+          case "googlepay":
+            // Google Pay uses generic UPI scheme for personal payments
+            upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
+              note
+            )}&cu=INR`;
+            break;
+          case "paytm":
+            // Paytm personal payment format
+            upiUrl = `paytm://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
+              note
+            )}&cu=INR`;
+            break;
+          case "amazon":
+            // Amazon Pay personal payment format
+            upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
+              note
+            )}&cu=INR`;
+            break;
+          default:
+            // Generic UPI URL for personal payments
+            upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
+              note
+            )}&cu=INR`;
+        }
+
+        showSuccessMessage("Opening UPI app... Please complete the payment");
+
+        try {
+          const link = document.createElement("a");
+          link.href = upiUrl;
+          link.style.display = "none";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } catch (error) {
+          // Fallback: try opening with window.location
+          try {
+            window.location.href = upiUrl;
+          } catch (secondError) {
+            alert(
+              "Unable to open UPI app. Please ensure you have a UPI app installed."
+            );
+            return;
+          }
+        }
+
+        // Payment confirmation dialog after a delay
+        setTimeout(() => {
+          const paymentSuccess = confirm(
+            'Did you complete the payment successfully?\n\nClick "OK" if payment was successful\nClick "Cancel" if payment failed or was cancelled'
+          );
+
+          if (paymentSuccess) {
+            // Remove item from cart and show success
+            cart = cart.filter(
+              (item) =>
+                !(item.id === currentProduct.id && item.size === selectedSize)
+            );
+            localStorage.setItem("cart", JSON.stringify(cart));
             updateCartBadge();
-            updateWishlistButton();
+            closeModal("upiModal");
+            showSuccessMessage(
+              "Order placed successfully! Thank you for shopping with Mini Bazar. Your order will be delivered soon!"
+            );
+          } else {
+            showSuccessMessage("Payment cancelled. You can try again anytime.");
+          }
+        }, 3000);
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+      }
+
+      function showSuccessMessage(message) {
+        const existingMessages = document.querySelectorAll(".success-message");
+        existingMessages.forEach((msg) => msg.remove());
+
+        const successDiv = document.createElement("div");
+        successDiv.className = "success-message";
+        successDiv.textContent = message;
+
+        document.body.appendChild(successDiv);
+
+        setTimeout(() => {
+          if (successDiv && successDiv.parentNode) {
+            successDiv.remove();
+          }
+        }, 3500);
+      }
+
+      // Close modals when clicking outside
+      window.addEventListener("click", function (e) {
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach((modal) => {
+          if (e.target === modal) {
+            modal.style.display = "none";
+          }
         });
-
-        function loadProduct() {
-            if (!currentProduct) {
-                currentProduct = products['4']; // Default product
-            }
-
-            // Set product image as an <img> element
-            const productImageDiv = document.getElementById('productImage');
-            productImageDiv.innerHTML = `<img src="${currentProduct.image}" alt="${currentProduct.title}" style="max-width:100%;max-height:100%;object-fit:contain;">`;
-
-            document.getElementById('productTitle').textContent = currentProduct.title;
-            document.getElementById('productRating').textContent = `${currentProduct.rating} ⭐`;
-            document.getElementById('ratingCount').textContent = `(${currentProduct.ratingCount.toLocaleString()})`;
-            document.getElementById('currentPrice').textContent = `₹${currentProduct.currentPrice}`;
-            document.getElementById('originalPrice').textContent = `₹${currentProduct.originalPrice}`;
-            document.getElementById('discountPercent').textContent = `${currentProduct.discount} off`;
-            document.getElementById('paymentAmount').textContent = currentProduct.currentPrice;
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-
-        function selectSize(element) {
-            document.querySelectorAll('.size-option').forEach(option => {
-                option.classList.remove('selected');
-            });
-            element.classList.add('selected');
-            selectedSize = element.textContent;
-        }
-
-        function toggleWishlist() {
-            if (!currentUser) {
-                alert('Please login first to add items to wishlist');
-                toggleAuth();
-                return;
-            }
-
-            const index = wishlist.indexOf(currentProduct.id);
-            if (index > -1) {
-                wishlist.splice(index, 1);
-                showSuccessMessage('Removed from wishlist');
-            } else {
-                wishlist.push(currentProduct.id);
-                showSuccessMessage('Added to wishlist ❤️');
-            }
-
-            localStorage.setItem('wishlist', JSON.stringify(wishlist));
-            updateWishlistButton();
-        }
-
-        function updateWishlistButton() {
-            const btn = document.getElementById('wishlistBtn');
-            btn.textContent = wishlist.includes(currentProduct.id) ? '❤️' : '🤍';
-        }
-
-        function addToCart() {
-            if (!currentUser) {
-                alert('Please login first to add items to cart');
-                toggleAuth();
-                return;
-            }
-
-            const existingItem = cart.find(item => item.id === currentProduct.id && item.size === selectedSize);
-
-            if (existingItem) {
-                existingItem.quantity += 1;
-                showSuccessMessage('Cart updated! Quantity increased');
-            } else {
-                cart.push({
-                    ...currentProduct,
-                    quantity: 1,
-                    size: selectedSize
-                });
-                showSuccessMessage('Item added to cart! 🛒');
-            }
-
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartBadge();
-        }
-
-        function buyNow() {
-            if (!currentUser) {
-                alert('Please login first to proceed');
-                toggleAuth();
-                return;
-            }
-
-            // Add to cart if not already present
-            const existingItem = cart.find(item => item.id === currentProduct.id && item.size === selectedSize);
-            if (!existingItem) {
-                cart.push({
-                    ...currentProduct,
-                    quantity: 1,
-                    size: selectedSize
-                });
-                localStorage.setItem('cart', JSON.stringify(cart));
-                updateCartBadge();
-            }
-
-            // Open UPI payment modal
-            document.getElementById('upiModal').style.display = 'block';
-        }
-
-        function updateCartBadge() {
-            const badge = document.getElementById('cartBadge');
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            badge.textContent = totalItems;
-            badge.style.display = totalItems > 0 ? 'flex' : 'none';
-        }
-
-        // Authentication functions
-        function toggleAuth() {
-            if (currentUser) {
-                logout();
-            } else {
-                document.getElementById('authModal').style.display = 'block';
-            }
-        }
-
-        function showLogin() {
-            document.getElementById('loginForm').classList.remove('hidden');
-            document.getElementById('signupForm').classList.add('hidden');
-        }
-
-        function showSignup() {
-            document.getElementById('signupForm').classList.remove('hidden');
-            document.getElementById('loginForm').classList.add('hidden');
-        }
-
-        function login() {
-            const phone = document.getElementById('loginPhone').value.trim();
-            const password = document.getElementById('loginPassword').value.trim();
-
-            if (!phone || !password) {
-                alert('Please fill in all fields');
-                return;
-            }
-
-            if (phone.length < 10 || isNaN(phone)) {
-                alert('Please enter a valid 10-digit phone number');
-                return;
-            }
-
-            if (password.length < 6) {
-                alert('Password must be at least 6 characters long');
-                return;
-            }
-
-            currentUser = {
-                name: phone.substring(0, 3) + 'xxxxx' + phone.substring(8),
-                phone: phone,
-            };
-
-            localStorage.setItem('currentUser', JSON.stringify(currentUser));
-
-            document.getElementById('loginPhone').value = '';
-            document.getElementById('loginPassword').value = '';
-
-            closeModal('authModal');
-            showSuccessMessage('✅ Login successful! Welcome to Mini Bazar');
-        }
-
-        function signup() {
-            const name = document.getElementById('signupName').value.trim();
-            const phone = document.getElementById('signupPhone').value.trim();
-            const password = document.getElementById('signupPassword').value.trim();
-
-            if (!name || !phone || !password) {
-                alert('Please fill in all fields');
-                return;
-            }
-
-            if (name.length < 2) {
-                alert('Please enter a valid name');
-                return;
-            }
-
-            if (phone.length < 10 || isNaN(phone)) {
-                alert('Please enter a valid 10-digit phone number');
-                return;
-            }
-
-            if (password.length < 6) {
-                alert('Password must be at least 6 characters long');
-                return;
-            }
-
-            currentUser = {
-                name: name,
-                phone: phone,
-            };
-
-            localStorage.setItem('currentUser', JSON.stringify(currentUser));
-
-            document.getElementById('signupName').value = '';
-            document.getElementById('signupPhone').value = '';
-            document.getElementById('signupPassword').value = '';
-
-            closeModal('authModal');
-            showSuccessMessage('🎉 Account created successfully! Welcome to Mini Bazar');
-        }
-
-        function logout() {
-            currentUser = null;
-            cart = [];
-            wishlist = [];
-            localStorage.removeItem('currentUser');
-            localStorage.removeItem('cart');
-            localStorage.removeItem('wishlist');
-            updateCartBadge();
-            updateWishlistButton();
-            showSuccessMessage('Logged out successfully');
-        }
-
-        function openCart() {
-            window.location.href = 'index.html';
-        }
-
-        // UPI Payment functions
-        function payWithUPI(app) {
-            const amount = document.getElementById('paymentAmount').textContent;
-            const upiId = 'vijaypal-70@ptyes';
-            const merchantName = 'Mini Bazar';
-
-            let upiUrl;
-            switch (app) {
-                case 'phonepe':
-                    upiUrl = `phonepe://pay?pa=${upiId}&am=${amount}&tn=${merchantName}%20Purchase&cu=INR`;
-                    break;
-                case 'googlepay':
-                    upiUrl = `tez://upi/pay?pa=${upiId}&am=${amount}&tn=${merchantName}%20Purchase&cu=INR`;
-                    break;
-                case 'paytm':
-                    upiUrl = `paytmmp://pay?pa=${upiId}&am=${amount}&tn=${merchantName}%20Purchase&cu=INR`;
-                    break;
-                case 'amazon':
-                    upiUrl = `amazon://upi/pay?pa=${upiId}&am=${amount}&tn=${merchantName}%20Purchase&cu=INR`;
-                    break;
-                default:
-                    upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${merchantName}%20Purchase&cu=INR`;
-            }
-
-            showSuccessMessage('Opening UPI app... Please complete the payment');
-
-            const link = document.createElement('a');
-            link.href = upiUrl;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            setTimeout(() => {
-                const paymentSuccess = confirm(
-                    'Did you complete the payment successfully?\n\nClick "OK" if payment was successful\nClick "Cancel" if payment failed or was cancelled'
-                );
-
-                if (paymentSuccess) {
-                    cart = cart.filter(item => !(item.id === currentProduct.id && item.size === selectedSize));
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    updateCartBadge();
-                    closeModal('upiModal');
-                    showSuccessMessage('🎉 Order placed successfully! Thank you for shopping with Mini Bazar. Your order will be delivered soon!');
-                } else {
-                    showSuccessMessage('❌ Payment cancelled. You can try again anytime.');
-                }
-            }, 2000);
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-
-        function showSuccessMessage(message) {
-            const existingMessages = document.querySelectorAll('.success-message');
-            existingMessages.forEach(msg => msg.remove());
-
-            const successDiv = document.createElement('div');
-            successDiv.className = 'success-message';
-            successDiv.textContent = message;
-
-            document.body.appendChild(successDiv);
-
-            setTimeout(() => {
-                if (successDiv && successDiv.parentNode) {
-                    successDiv.remove();
-                }
-            }, 3500);
-        }
-
-        // Close modals when clicking outside
-        window.addEventListener('click', function(e) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
