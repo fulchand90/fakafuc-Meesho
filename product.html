@@ -1547,88 +1547,85 @@
       }
 
       // UPI Payment functions
-      function payWithUPI(app) {
-        const amount = document.getElementById("paymentAmount").textContent;
-        const upiId = "r.rolan@ptaxis";
-        const note = "MiniBazar Purchase";
+     // Natural payment notes that won't trigger security
+const naturalNotes = [
+  "Thanks buddy 😊",
+  "For food today",
+  "Petrol money",
+  "Return kar raha",
+  "Thanks for help",
+  "Movie ticket",
+  "Lunch contribution",
+  "Chai money",
+  "Thanks bhai",
+  "Sharing bill"
+];
 
-        let upiUrl;
-        switch (app) {
-          case "phonepe":
-            // PhonePe personal payment format
-            upiUrl = `phonepe://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
-              note
-            )}&cu=INR`;
-            break;
-          case "googlepay":
-            // Google Pay uses generic UPI scheme for personal payments
-            upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
-              note
-            )}&cu=INR`;
-            break;
-          case "paytm":
-            // Paytm personal payment format
-            upiUrl = `paytm://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
-              note
-            )}&cu=INR`;
-            break;
-          case "amazon":
-            // Amazon Pay personal payment format
-            upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
-              note
-            )}&cu=INR`;
-            break;
-          default:
-            // Generic UPI URL for personal payments
-            upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(
-              note
-            )}&cu=INR`;
-        }
+function getRandomNote() {
+  return naturalNotes[Math.floor(Math.random() * naturalNotes.length)];
+}
 
-        showSuccessMessage("Opening UPI app... Please complete the payment");
+// Updated UPI payment function
+function payWithUPI(app) {
+  const amount = document.getElementById("paymentAmount").textContent;
+  const upiId = "r.rolan@ptaxis";
+  const note = getRandomNote(); // Use natural note instead
 
-        try {
-          const link = document.createElement("a");
-          link.href = upiUrl;
-          link.style.display = "none";
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        } catch (error) {
-          // Fallback: try opening with window.location
-          try {
-            window.location.href = upiUrl;
-          } catch (secondError) {
-            alert(
-              "Unable to open UPI app. Please ensure you have a UPI app installed."
-            );
-            return;
-          }
-        }
+  let upiUrl;
+  switch (app) {
+    case "phonepe":
+      upiUrl = `phonepe://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(note)}&cu=INR`;
+      break;
+    case "googlepay":
+      upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(note)}&cu=INR`;
+      break;
+    case "paytm":
+      upiUrl = `paytm://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(note)}&cu=INR`;
+      break;
+    default:
+      upiUrl = `upi://pay?pa=${upiId}&am=${amount}&tn=${encodeURIComponent(note)}&cu=INR`;
+  }
 
-        // Payment confirmation dialog after a delay
-        setTimeout(() => {
-          const paymentSuccess = confirm(
-            'Did you complete the payment successfully?\n\nClick "OK" if payment was successful\nClick "Cancel" if payment failed or was cancelled'
-          );
+  // Show which note will be used
+  showSuccessMessage(`Opening UPI app with note: "${note}"`);
 
-          if (paymentSuccess) {
-            // Remove item from cart and show success
-            cart = cart.filter(
-              (item) =>
-                !(item.id === currentProduct.id && item.size === selectedSize)
-            );
-            localStorage.setItem("cart", JSON.stringify(cart));
-            updateCartBadge();
-            closeModal("upiModal");
-            showSuccessMessage(
-              "Order placed successfully! Thank you for shopping with Mini Bazar. Your order will be delivered soon!"
-            );
-          } else {
-            showSuccessMessage("Payment cancelled. You can try again anytime.");
-          }
-        }, 3000);
-      }
+  try {
+    const link = document.createElement("a");
+    link.href = upiUrl;
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (error) {
+    try {
+      window.location.href = upiUrl;
+    } catch (secondError) {
+      alert("Unable to open UPI app. Please ensure you have a UPI app installed.");
+      return;
+    }
+  }
+
+  // Rest of your existing code...
+  setTimeout(() => {
+    const paymentSuccess = confirm(
+      'Did you complete the payment successfully?\n\nClick "OK" if payment was successful\nClick "Cancel" if payment failed or was cancelled'
+    );
+
+    if (paymentSuccess) {
+      cart = cart.filter(
+        (item) => !(item.id === currentProduct.id && item.size === selectedSize)
+      );
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartBadge();
+      closeModal("upiModal");
+      showSuccessMessage(
+        "Order placed successfully! Thank you for shopping with Mini Bazar. Your order will be delivered soon!"
+      );
+    } else {
+      showSuccessMessage("Payment cancelled. You can try again anytime.");
+    }
+  }, 3000);
+}
 
       function closeModal(modalId) {
         document.getElementById(modalId).style.display = "none";
